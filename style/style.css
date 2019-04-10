@@ -57,13 +57,16 @@ body{margin: 0; position: absolute;
                 button.header-button{
                     position: relative;
                     display: flex;
-                    box-shadow: 0 3px 6px rgba(247, 155, 155, 0.1);
+                    box-shadow: 0 3px 6px rgba(247, 155, 155, 0.3);
                     min-width: 7em;
                     height: 100%;
                     padding: 10px;
                     justify-content: center;
                     align-items: center;
                     box-sizing: border-box;
+                }
+                button.header-button.logo{
+                    box-shadow: 0 3px 6px rgba(247, 155, 155, 0.0);
                 }
                 button.header-button.login{
                     background-color: #7cf9c3;
@@ -77,9 +80,11 @@ body{margin: 0; position: absolute;
         }
             .carousel-painel{
                 margin-top: 2em;
+                position: relative;
+                height: min-content;
             }
                 .carousel-div{
-                    
+                    box-shadow: 0 3px 6px rgba(247, 155, 155, 0.1);
                 }
         span.header-style{
             font-family: 'Marvin';
