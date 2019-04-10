@@ -1,3 +1,7 @@
+$('button.header-button.logo').click(function(){
+    location.reload(true)
+})
+
 $(document).ready(function(){
     $(".owl-carousel").owlCarousel({loop:true,
         center:true,

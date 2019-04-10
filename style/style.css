@@ -93,11 +93,24 @@ body{margin: 0; position: absolute;
             font-family: 'Marvin';
             font-size: 16px;
         }
+        span.italic{
+            font-style: italic;
+        }
         @media screen and (min-width: 300px) and (max-width: 599px) { /* ...mobile styles here... */ 
-            
+            .header{
+                justify-content: center;
+            }
+                .header-group.desktop{
+                    display: none;
+                }
         }
         @media screen and (min-width: 600px) and (max-width: 899px) { /* ...tablet styles here... */
-            
+            .header{
+                justify-content: center;
+            }
+                .header-group.desktop{
+                    display: none;
+                }
         }
         @media screen and (min-width: 900px) { /* ...desktop styles here...*/
             
