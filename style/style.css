@@ -23,6 +23,7 @@ body{margin: 0; position: absolute;
     display: flex; box-sizing: border-box;
     height: 100%; width: 100%;
     font-family: 'Roboto-Regular', Helvetica, Arial, sans-serif;
+    overflow: hidden;
 }
 
     .page{display: flex; flex-direction: column; box-sizing: border-box;
@@ -74,9 +75,11 @@ body{margin: 0; position: absolute;
                 
         .content{
             display: flex; box-sizing: border-box;
-            top: 5em;
+            top: 5em; 
+            flex-direction: column;
             height: calc(100% - 5em); width:100%; position: absolute;
-            /*background-color: #f6f6ff;*/
+            overflow-x: hidden;
+            overflow-y: auto;
         }
             .carousel-painel{
                 margin-top: 2em;
@@ -163,11 +166,11 @@ li{margin: 3px 0 3px 0;}
 	}
 	::-webkit-scrollbar-thumb:vertical{
 		height: 4px;
-		background-color: #ffffff;
+		background-color: #40507c;
 		border-radius:2px;
 	}
 	::-webkit-scrollbar-thumb:horizontal{
 		height: 4px;
-		background-color: #ffffff;
+		background-color: #40507c;
 		border-radius:2px;
     }
