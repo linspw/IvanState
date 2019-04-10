@@ -1,0 +1,163 @@
+@font-face{
+	font-family: 'Roboto-Regular';
+	src: url('fonts/Roboto/Roboto-Regular.ttf');
+}
+@font-face{
+	font-family: 'Swiss721';
+	src: url('fonts/Swiss/Swiss721CondensedBT.ttf');
+}
+@font-face{
+	font-family: 'Humger-Regular';
+	src: url('fonts/Humger/Humger.ttf');
+}
+@font-face{
+	font-family: 'Lato-Regular';
+	src: url('fonts/Lato/Lato-Regular.ttf');
+}
+@font-face{
+    font-family: 'Marvin';
+    src: url('fonts/Marvin/Marvin.otf');
+}
+
+body{margin: 0; position: absolute;
+    display: flex; box-sizing: border-box;
+    height: 100%; width: 100%;
+    font-family: 'Roboto-Regular', Helvetica, Arial, sans-serif;
+}
+
+    .page{display: flex; flex-direction: column; box-sizing: border-box;
+        height: 100%; width: 100%; overflow: hidden;
+    }
+        .header{display: flex; flex-direction: row;
+            box-sizing: border-box;
+            z-index: 10;
+            height: 5em; width: 100%; 
+            background-color: white; box-shadow: 0 3px 6px rgba(0,0,0,.1); 
+            position: relative;     
+            transition: 0.5s;
+            justify-content: space-between;
+        }
+            .header-group{
+                display: flex; box-sizing: border-box;
+                position: relative;
+                justify-content: center;
+            }
+                .header-group .label{
+                    display: flex;
+                    position: relative;
+                    box-sizing: border-box;
+                    min-width: 7em; padding: 10px;
+                    height: 100%;
+                    justify-content: center; align-items: center;
+                }
+                    #fa-icon-header-what{
+                        margin-left: 10px;
+                        font-size: 18px;
+                    }
+                button.header-button{
+                    position: relative;
+                    display: flex;
+                    box-shadow: 0 3px 6px rgba(247, 155, 155, 0.1);
+                    min-width: 7em;
+                    height: 100%;
+                    padding: 10px;
+                    justify-content: center;
+                    align-items: center;
+                    box-sizing: border-box;
+                }
+                button.header-button.login{
+                    background-color: #7cf9c3;
+                }
+                
+        .content{
+            display: flex; box-sizing: border-box;
+            top: 5em;
+            height: calc(100% - 5em); width:100%; position: absolute;
+            /*background-color: #f6f6ff;*/
+        }
+
+        span.header-style{
+            font-family: 'Marvin';
+            font-size: 16px;
+        }
+        @media screen and (min-width: 300px) and (max-width: 599px) { /* ...mobile styles here... */ 
+            
+        }
+        @media screen and (min-width: 600px) and (max-width: 899px) { /* ...tablet styles here... */
+            
+        }
+        @media screen and (min-width: 900px) { /* ...desktop styles here...*/
+            
+        }
+        
+
+/*Cores*/
+.Color-SL1{
+    color: #6f1988;
+}
+.Color-SL2{
+    color: #1e8845;
+}
+.Color-SL3{
+    color: #b61c1c;
+}
+.Color-SL4{
+    color: #073054;
+}
+.Color-SL5{
+    color: #375669;
+}
+.Color-SL6{
+    color: #25d366;
+}
+/*Configuração padrões*/
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+    color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+button:hover{
+    box-shadow: 0 3px 6px rgba(0,0,0,.19) !important;
+    opacity: 0.7;
+}
+button:active{
+    opacity: 0.5;
+    box-shadow: inset 0px 0px 1px 2px #315867 !important;
+}
+
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+  
+}
+li, ul{
+    list-style-type: none;
+    padding-inline-start: 0px;
+}
+li{margin: 3px 0 3px 0;}
+
+::-webkit-scrollbar
+{
+	width: 6px !important;
+	height: 6px !important;
+}
+	::-webkit-scrollbar-track-piece  {
+		-webkit-tap-highlight-color: transparent;
+	}
+	::-webkit-scrollbar-thumb:vertical{
+		height: 4px;
+		background-color: #ffffff;
+		border-radius:2px;
+	}
+	::-webkit-scrollbar-thumb:horizontal{
+		height: 4px;
+		background-color: #ffffff;
+		border-radius:2px;
+    }
