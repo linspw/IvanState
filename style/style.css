@@ -75,7 +75,12 @@ body{margin: 0; position: absolute;
             height: calc(100% - 5em); width:100%; position: absolute;
             /*background-color: #f6f6ff;*/
         }
-
+            .carousel-painel{
+                margin-top: 2em;
+            }
+                .carousel-div{
+                    
+                }
         span.header-style{
             font-family: 'Marvin';
             font-size: 16px;
