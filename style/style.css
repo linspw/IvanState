@@ -87,6 +87,7 @@ body{margin: 0; position: absolute;
             height: calc(100% - 5em); width:100%; position: absolute;
             overflow-x: hidden;
             overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
         }
             .painel{
                 display: flex;
@@ -178,7 +179,14 @@ body{margin: 0; position: absolute;
                         }
                         .painel.imoveis .item.mid{
                             grid-area: mid;
+                            display: flex;
+                            flex-direction: column;
                         }
+                            .item.mid span.top{
+                                font-family: 'Nunito-Light';
+                                font-size: 16px;
+                                padding: 10px;
+                            }
                             .painel.imoveis .item.mid .wrapper-search{
                                 width: 100%;
                                 height: 100%;
@@ -203,13 +211,17 @@ body{margin: 0; position: absolute;
                                             display: flex;
                                             align-items: center;
                                             overflow: hidden;
+                                            position: relative;
                                         }
                                             .card.imovel .img img{
                                                 width: 100%;
                                                 transition: transform .5s;
                                             }
+                                            .card.imovel .img img.zoom{
+                                                transform: scale(1.2);
+                                            }
                                             .card.imovel .img img.zoom:hover{
-                                                transform: scale(1.5);
+                                                transform: scale(1.7);
                                             }
                                         
             .carousel-painel{
