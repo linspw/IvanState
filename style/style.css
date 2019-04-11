@@ -82,7 +82,7 @@ body{margin: 0; position: absolute;
                 
         .content{
             display: flex; box-sizing: border-box;
-            top: 5em; 
+            top: 5em;
             flex-direction: column;
             height: calc(100% - 5em); width:100%; position: absolute;
             overflow-x: hidden;
@@ -99,7 +99,6 @@ body{margin: 0; position: absolute;
 
             }   
                 .painel.footer{
-                    position: relative;
                     width: 100%;
                     min-height: 4em;
                     background-color: #4a857d9f;
@@ -171,6 +170,7 @@ body{margin: 0; position: absolute;
                                     padding-right: 10px;
                                     font-family: 'Nunito-Light';
                                     border: 2px solid #5e7276;
+                                    box-sizing: border-box;
                                     box-shadow: 0 3px 6px rgba(91, 161, 157, 0.4);
                                 }
                         .painel.imoveis .item.left{
