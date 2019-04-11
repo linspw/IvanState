@@ -18,6 +18,10 @@
     font-family: 'Marvin';
     src: url('fonts/Marvin/Marvin.otf');
 }
+@font-face{
+    font-family: 'Nunito-Light';
+    src: url('fonts/Nunito/NunitoSans-Light.ttf');
+}
 
 body{margin: 0; position: absolute;
     display: flex; box-sizing: border-box;
@@ -104,9 +108,9 @@ body{margin: 0; position: absolute;
                     /*background-color: #375669;*/
                     display: grid;
                     grid-template-areas: 
-                        'top top top top'
-                        'left mid mid mid'
-                        'left mid mid mid';
+                        'top top top top top'
+                        'left mid mid mid mid'
+                        'left mid mid mid mid';
                 }
                     .painel.imoveis .item{
                         padding: 10px;
@@ -114,18 +118,63 @@ body{margin: 0; position: absolute;
                     }
                         .painel.imoveis .item.top{
                             grid-area: top;
-                            background-color: #25d366;
+                            /*background-color: #363d46;*/
+                            background-color: #f6f6f6;
                             display: flex;
-                            justify-content: center;
-                            
+                            justify-content: space-around;
+                            align-items: center;
+                            flex-direction: column;
+                            padding: 30px 10px 30px 10px;
                         }
+                            .painel.imoveis .item.top span.strong{
+                                /*color: #f5f0f0;*/
+                                font-size: 22px;
+                                font-family: 'Nunito-Light';
+                            }
+                            .painel.imoveis .item.top .group-input{
+                                display: flex;
+                                width: 80%;
+                                position: relative;
+                            }
+                                .painel.imoveis .item.top .group-input button.search{
+                                    position: absolute;
+                                    top: 0;
+                                    right: 0;
+                                    display: flex;
+                                    box-shadow: 0 3px 6px rgba(247, 155, 155, 0.3);
+                                    height: 100%;
+                                    padding: 10px 20px 10px 20px;
+                                    box-sizing: border-box;
+                                    border-radius: 0px 8px 8px 0px;
+                                    border: 1px solid #5e7276;
+                                    /*color: #444444;*/
+                                    color: #1bb6d4;
+                                    font-size: 22px;
+                                }
+                                    .painel.imoveis .item.top .group-input button.search:hover{
+                                        background-color: #1bb6d4;
+                                        color: white;
+                                    }
+                                .painel.imoveis .item.top .group-input input.search{
+                                    width: 100%;
+                                    font-size: 26px;
+                                    border-radius: 8px;
+                                    color: #434549;
+                                    padding: 4px;
+                                    padding-left: 10px;
+                                    padding-right: 10px;
+                                    font-family: 'Nunito-Light';
+                                    border: 2px solid #5e7276;
+                                }
                         .painel.imoveis .item.left{
                             grid-area: left;
-                            background-color: #7cf9c3;
+                            /*background-color: #7cf9c3;*/
+
                         }
                         .painel.imoveis .item.mid{
                             grid-area: mid;
-                            background-color: #b61c1c;
+                            /*background-color: #b61c1c;*/
+
                         }
             .carousel-painel{
                 margin-top: 2em;
@@ -142,6 +191,9 @@ body{margin: 0; position: absolute;
         span.italic{
             font-style: italic;
         }
+        
+
+
         @media screen and (min-width: 300px) and (max-width: 599px) { /* ...mobile styles here... */ 
             .header{
                 justify-content: center;
