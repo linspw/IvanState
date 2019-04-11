@@ -69,6 +69,9 @@ body{margin: 0; position: absolute;
                 button.header-button.logo{
                     box-shadow: 0 3px 6px rgba(247, 155, 155, 0.0);
                 }
+                    button.header-button.logo img{
+                        width: 100%;
+                    }
                 button.header-button.login{
                     background-color: #7cf9c3;
                 }
@@ -81,6 +84,49 @@ body{margin: 0; position: absolute;
             overflow-x: hidden;
             overflow-y: auto;
         }
+            .painel{
+                display: flex;
+                position: relative;
+                margin-top: 10px;
+                width: 100%;
+                min-height: 16em;
+                box-shadow: 0 3px 6px rgba(247, 155, 155, 0.4);
+                z-index: 2;
+
+            }   
+                .painel.footer{
+                    position: relative;
+                    width: 100%;
+                    min-height: 4em;
+                    background-color: #4a857d9f;
+                }
+                .painel.imoveis{
+                    /*background-color: #375669;*/
+                    display: grid;
+                    grid-template-areas: 
+                        'top top top top'
+                        'left mid mid mid'
+                        'left mid mid mid';
+                }
+                    .painel.imoveis .item{
+                        padding: 10px;
+                        box-sizing: border-box;
+                    }
+                        .painel.imoveis .item.top{
+                            grid-area: top;
+                            background-color: #25d366;
+                            display: flex;
+                            justify-content: center;
+                            
+                        }
+                        .painel.imoveis .item.left{
+                            grid-area: left;
+                            background-color: #7cf9c3;
+                        }
+                        .painel.imoveis .item.mid{
+                            grid-area: mid;
+                            background-color: #b61c1c;
+                        }
             .carousel-painel{
                 margin-top: 2em;
                 position: relative;
