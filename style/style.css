@@ -33,7 +33,7 @@ body{margin: 0; position: absolute;
     .page{display: flex; flex-direction: column; box-sizing: border-box;
         height: 100%; width: 100%; overflow: hidden;
     }
-        .header{display: flex; flex-direction: row;
+        .page > .header{display: flex; flex-direction: row;
             box-sizing: border-box;
             z-index: 10;
             height: 5em; width: 100%; 
@@ -80,7 +80,7 @@ body{margin: 0; position: absolute;
                     background-color: #7cf9c3;
                 }
                 
-        .content{
+        .page > .content{
             display: flex; box-sizing: border-box;
             top: 5em;
             flex-direction: column;
@@ -89,7 +89,7 @@ body{margin: 0; position: absolute;
             overflow-y: auto;
             -webkit-overflow-scrolling: touch;
         }
-            .painel{
+            .page > .content > .painel{
                 display: flex;
                 position: relative;
                 margin-top: 10px;
@@ -98,12 +98,12 @@ body{margin: 0; position: absolute;
                 z-index: 2;
 
             }   
-                .painel.footer{
+                .page > .content > .painel.footer{
                     width: 100%;
                     min-height: 4em;
-                    background-color: #4a857d9f;
+                    background-color: #244943;
                 }
-                .painel.imoveis{
+                .page > .content > .painel.imoveis{
                     display: grid;
                     box-sizing: border-box;
                     grid-template-areas: 
@@ -127,7 +127,8 @@ body{margin: 0; position: absolute;
                             justify-content: space-around;
                             align-items: center;
                             flex-direction: column;
-                            padding: 30px 10px 30px 10px;
+                            padding: 30px 10px 50px 10px;
+                            box-shadow: 0px 0px 6px 3px rgba(247, 155, 155, 0.3);
                         }
                             .painel.imoveis .item.top span.strong{
                                 /*color: #f5f0f0;*/
@@ -197,11 +198,14 @@ body{margin: 0; position: absolute;
                                     width: 100%;
                                     height: 100%;
                                 }
-                                    .wrapper-search .item .card.imovel{
+                                    .wrapper-search > .item > .card.imovel{
                                         width: 100%;
                                         height: 22em;
                                         border: 1px solid rgba(94, 114, 118, 0.4);
                                         box-sizing: border-box;
+                                    }
+                                    .wrapper-search > .item > .card.imovel:hover{
+                                        box-shadow: 0px 0px 10px 3px rgba(186, 155, 247, 0.7);
                                     }
                                         .card.imovel .img{
                                             width: 100%;
@@ -223,11 +227,138 @@ body{margin: 0; position: absolute;
                                             .card.imovel .img img.zoom:hover{
                                                 transform: scale(1.7);
                                             }
-                                        
+                                            .card.imovel > .content{
+                                                position: relative;
+                                                height: 10em;
+                                                width: 100%;
+                                                padding: 10px;
+                                                box-sizing: border-box;
+                                                display: block;
+                                                flex-direction: column;
+                                                justify-content: space-between;
+                                            }
+                                                .card.imovel > .content > .header{
+                                                    width: 100%;
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    overflow: hidden;
+                                                }
+                                                    .card.imovel > .content > div > .painel{
+                                                        display: flex;
+                                                        flex-flow: column;
+                                                        position: relative;
+                                                    }
+                                                        .card.imovel > .content > div > div > span.strong{
+                                                            font-family: 'Nunito-Light';
+                                                            font-size: 1.4em;
+                                                        }
+                                                        .card.imovel > .content > div > div > span.light{
+                                                            font-family: 'Nunito-Light';
+                                                            font-size: 0.8em;
+                                                            position: relative;
+                                                            display: flex;
+                                                            justify-content: flex-end;
+                                                        }
+                                                        .card.imovel > .content > div > div > span.strongPrice{
+                                                            font-size: 1.5em;
+                                                            font-weight: 200;
+                                                            padding: 20px 0px 5px 0px;
+                                                            display: flex;
+                                                        }
+
+                                                .card.imovel > .content > .mid{
+                                                    width: 100%;
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    overflow: hidden;
+                                                }
+                                                .card.imovel > .content > .footer{
+                                                    position: absolute;
+                                                    width: 100%;
+                                                    height: 1.5em;
+                                                    bottom: 0; left: 0;
+                                                    color: white;
+                                                    font-size: 14px;
+                                                    
+                                                }
+                                                .card.imovel > .content > .footer > .painel{
+                                                    position: absolute;
+                                                    width: 100%;
+                                                    height: 100%;
+                                                    display: grid;
+                                                    grid-template-areas: 
+                                                    'suite banheiro quarto areautil extra'; 
+                                                    box-sizing: border-box;
+                                                    border: 1px solid rgba(94, 114, 118, 0.4);
+
+                                                }
+                                                    .card.imovel > .content > div > .painel > .slot{
+                                                        height: 100%;
+                                                        width: 100%;
+                                                        box-sizing: border-box;
+                                                        display: inline-flex;
+                                                        justify-content: center;
+                                                        align-items: center;
+                                                        border-right: 2px solid white;
+                                                    }
+                                                        .card.imovel > .content > div > .painel > .slot.banheiro{
+                                                            grid-area: banheiro;
+                                                        }
+                                                        .card.imovel > .content > div > .painel > .slot.suite{
+                                                            grid-area: suite;
+                                                        }
+                                                        .card.imovel > .content > div > .painel > .slot.quarto{
+                                                            grid-area: quarto;
+                                                        }
+                                                        .card.imovel > .content > div > .painel > .slot.areautil{
+                                                            grid-area: areautil;
+                                                        }
+                                                        .card.imovel > .content > div > .painel > .slot.extra{
+                                                            grid-area: extra;
+                                                            border-right: none;
+                                                        }
+                                                        .card.imovel > .content > div > .painel > .slot > span{
+                                                            margin-right: 10px;
+                                                        }
+                                                        .tooltip-box{
+                                                            visibility: hidden;
+                                                            width: auto;
+                                                            background-color: black;
+                                                            color: #fff;
+                                                            text-align: center;
+                                                            background-color: #ffffff; 
+                                                            border-radius: 8px;
+                                                            box-shadow: 0 3px 6px rgba(0,0,0,.2);
+                                                            z-index: 10;
+                                                            padding: 10px;
+                                                            position: absolute;
+                                                            z-index: 20;
+                                                            top: 150%;
+                                                        }
+                                                            .tooltip-box::after {
+                                                                content: "";
+                                                                position: absolute;
+                                                                bottom: 100%;
+                                                                left: 50%;
+                                                                margin-left: -5px;
+                                                                border-width: 5px;
+                                                                border-style: solid;
+                                                                border-color: transparent transparent rgb(204, 204, 204) transparent;
+                                                            }
+                                                            .tooltip-box > span.title{
+                                                                color: #073054;
+                                                                background-color: white;
+
+                                                            }
+                                                            .slot:hover .tooltip-box.hovertip{
+                                                                visibility: visible;
+                                                                box-shadow: inset 0px 0px 1px 2px #315867 !important;
+                                                            }
+
             .carousel-painel{
-                margin-top: 2em;
                 position: relative;
                 height: min-content;
+                z-index: 2;
             }
                 .carousel-div{
                     box-shadow: 0 3px 6px rgba(247, 155, 155, 0.1);
@@ -243,7 +374,7 @@ body{margin: 0; position: absolute;
 
 
         @media screen and (min-width: 300px) and (max-width: 599px) { /* ...mobile styles here... */ 
-            .painel.imoveis{
+            .page > .content > .painel.imoveis {
                 display: grid;
                 grid-template-areas: 
                     'top top top top top top top'
@@ -251,7 +382,7 @@ body{margin: 0; position: absolute;
                     'mid mid mid mid mid mid mid'
                     'mid mid mid mid mid mid mid';
             }.painel.imoveis .item.left{display: none;}
-            .painel.imoveis .item.mid .wrapper-search{
+            .page > .content > .painel.imoveis .item.mid .wrapper-search{
                 grid-template-columns: 1fr;
             }
 
@@ -265,7 +396,7 @@ body{margin: 0; position: absolute;
                 }
         }
         @media screen and (min-width: 600px) and (max-width: 899px) { /* ...tablet styles here... */
-            .painel.imoveis{
+            .page > .content > .painel.imoveis {
                 display: grid;
                 grid-template-areas: 
                     'top top top top top top top'
@@ -273,7 +404,7 @@ body{margin: 0; position: absolute;
                     'mid mid mid mid mid mid mid'
                     'mid mid mid mid mid mid mid';
             }.painel.imoveis .item.left{display: none;}
-            .painel.imoveis .item.mid .wrapper-search{
+            .page > .content > .painel.imoveis .item.mid .wrapper-search{
                 grid-template-columns: 1fr 1fr;
             }
 
@@ -308,6 +439,24 @@ body{margin: 0; position: absolute;
 }
 .Color-SL6{
     color: #25d366;
+}
+.Color-PR1{
+    color: #807d65;
+}
+.Color-PR2{
+    color: #595a99;
+}
+.Color-PR3{
+    color: #2c4088;
+}
+.Back-CL1{
+    background-color: #807d65;
+}
+.Back-CL2{
+    background-color: #595a99;
+}
+.Back-CL3{
+    background-color: #2c4088;
 }
 /*Configuração padrões*/
 button, input[type="submit"], input[type="reset"] {
