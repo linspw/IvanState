@@ -110,7 +110,7 @@ body{margin: 0; position: absolute;
                 }
                 .page > .content > .painel.footer{
                     width: 100%;
-                    min-height: 4em;
+                    height: 4em;
                     background-color: #244943;
                     box-sizing: border-box;
                 }
