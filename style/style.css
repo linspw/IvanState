@@ -84,7 +84,7 @@ body{margin: 0; position: absolute;
             display: flex; box-sizing: border-box;
             top: 5em;
             flex-direction: column;
-            height: calc(100% - 5em); width:100%; position: absolute;
+            max-height: calc(100% - 5em); width:100%; position: absolute;
             overflow-x: hidden;
             overflow-y: auto;
             -webkit-overflow-scrolling: touch;
