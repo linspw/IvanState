@@ -87,10 +87,9 @@ body{margin: 0; position: absolute;
                 }
                 
         .page > .content{
-            display: -webkit-flex; /* Safari */
-            -webkit-flex-direction: column; /* Safari 6.1+ */
-            grid-area: mainpage;
-            display: flex;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            grid-template-rows: auto;
             flex-direction: column;
             box-sizing: border-box;
             width:100%;
@@ -103,8 +102,8 @@ body{margin: 0; position: absolute;
                 display: -webkit-flex; /* Safari */
                 -webkit-flex-direction: column; /* Safari 6.1+ */
                 display: flex;
-                padding: 10px 0px 10px 0px;
                 flex-direction: column;
+                padding: 10px 0px 10px 0px;
                 position: relative;
                 width: 100%;
                 box-sizing: border-box;
@@ -121,7 +120,7 @@ body{margin: 0; position: absolute;
                     grid-template-columns: repeat(7, minmax(0, 1fr));
 
                 }
-                .page > .content > .painel.footer{
+                .painel.footer{
                     align-self: flex-end;
                     min-height: 4em;
                     background-color: #244943;
