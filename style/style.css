@@ -107,9 +107,7 @@ body{margin: 0; position: absolute;
                 position: relative;
                 width: 100%;
                 box-sizing: border-box;
-                margin-top: 10px;
                 z-index: 2;
-                height: fit-content;
             }   
                 .page > .content > .painel.imoveis{
                     display: grid;
