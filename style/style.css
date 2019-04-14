@@ -370,7 +370,7 @@ body{margin: 0; position: absolute;
                                                                 box-shadow: inset 0px 0px 1px 2px #315867 !important;
                                                             }
 
-            .painel.carousel-painel{
+            .painel .carousel-painel{
                 height: min-content;
                 z-index: 2;
             }
