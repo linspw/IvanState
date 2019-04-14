@@ -89,7 +89,7 @@ body{margin: 0; position: absolute;
             box-sizing: border-box;
             top: 5em;
             width:100%;
-            max-height: calc(100% - 5em);  
+            height: calc(100% - 5em);  
             overflow-x: hidden;
             overflow-y: auto;
             -webkit-overflow-scrolling: touch;
