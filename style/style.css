@@ -81,16 +81,24 @@ body{margin: 0; position: absolute;
                 }
                 
         .page > .content{
-            display: flex; box-sizing: border-box;
-            top: 5em;
+            display: -webkit-flex; /* Safari */
+            -webkit-flex-direction: column; /* Safari 6.1+ */
+            display: flex;
             flex-direction: column;
-            max-height: calc(100% - 5em); width:100%; position: absolute;
+            position: absolute;
+            box-sizing: border-box;
+            top: 5em;
+            width:100%;
+            max-height: calc(100% - 5em);  
             overflow-x: hidden;
             overflow-y: auto;
             -webkit-overflow-scrolling: touch;
         }
             .page > .content > .painel{
+                display: -webkit-flex; /* Safari */
+                -webkit-flex-direction: column; /* Safari 6.1+ */
                 display: flex;
+                flex-direction: column;
                 position: relative;
                 margin-top: 10px;
                 width: 100%;
