@@ -85,11 +85,11 @@ body{margin: 0; position: absolute;
             -webkit-flex-direction: column; /* Safari 6.1+ */
             display: flex;
             flex-direction: column;
-            position: absolute;
+            align-items: flex-start;
             box-sizing: border-box;
             top: 5em;
             width:100%;
-            height: calc(100% - 5em);  
+            height: 100%;  
             overflow-x: hidden;
             overflow-y: auto;
             -webkit-overflow-scrolling: touch;
@@ -100,9 +100,9 @@ body{margin: 0; position: absolute;
                 display: flex;
                 flex-direction: column;
                 position: relative;
+                width: 100%;
                 box-sizing: border-box;
                 margin-top: 10px;
-                width: 100%;
                 box-shadow: 0 3px 6px rgba(247, 155, 155, 0.4);
                 z-index: 2;
             }   
@@ -118,7 +118,7 @@ body{margin: 0; position: absolute;
 
                 }
                 .page > .content > .painel.footer{
-                    width: 100%;
+                    align-self: flex-end;
                     min-height: 4em;
                     background-color: #244943;
                 }
@@ -364,8 +364,7 @@ body{margin: 0; position: absolute;
                                                                 box-shadow: inset 0px 0px 1px 2px #315867 !important;
                                                             }
 
-            .carousel-painel{
-                position: relative;
+            .painel.carousel-painel{
                 height: min-content;
                 z-index: 2;
             }
